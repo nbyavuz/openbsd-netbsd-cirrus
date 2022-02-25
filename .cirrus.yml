@@ -1,0 +1,44 @@
+task:
+  name: NetBSD - Persistent Worker
+
+  persistent_worker:
+    labels:
+      name: netbsd-trial-01
+
+  hello_world_script: echo "Hello world"
+
+
+task:
+  name: NetBSD - Compute Engine Instance
+
+  compute_engine_instance:
+    image_project: pg-ci-images-dev
+    image: family/pg-ci-netbsd-9-2
+    cpu: 4
+    memory: 4G
+    disk: 25
+
+  hello_world_script: echo "Hello world"
+
+
+task:
+  name: OpenBSD - Persistent Worker
+
+  persistent_worker:
+    labels:
+      name: openbsd-trial-01
+
+  hello_world_script: echo "Hello world"
+
+
+task:
+  name: OpenBSD - Compute Engine Instance
+
+  compute_engine_instance:
+    image_project: pg-ci-images-dev
+    image: family/pg-ci-openbsd-7-0
+    cpu: 4
+    memory: 4G
+    disk: 25
+
+  hello_world_script: echo "Hello world"
