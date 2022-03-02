@@ -14,6 +14,7 @@ task:
   compute_engine_instance:
     image_project: pg-ci-images-dev
     image: family/pg-ci-netbsd-9-2
+    platform: netbsd
     cpu: 4
     memory: 4G
     disk: 25
@@ -37,6 +38,7 @@ task:
   compute_engine_instance:
     image_project: pg-ci-images-dev
     image: family/pg-ci-openbsd-7-0
+    platform: openbsd
     cpu: 4
     memory: 4G
     disk: 25
