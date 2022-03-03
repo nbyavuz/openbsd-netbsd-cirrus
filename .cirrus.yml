@@ -1,3 +1,5 @@
+gcp_credentials: ENCRYPTED[a6888d60b8c6890363375e2e150457686caa9037fda18c51b31f4f4996bf1c17252508c18012ccaa65c6813e7ff01691]
+
 task:
   name: NetBSD - Persistent Worker
 
@@ -18,6 +20,20 @@ task:
     cpu: 4
     memory: 4G
     disk: 25
+
+  hello_world_script: echo "Hello world"
+
+task:
+  name: NetBSD - GCE
+
+  gce_instance:
+    image_project: pg-ci-images-dev
+    image_family: pg-ci-netbsd-9-2
+    platform: netbsd
+    cpu: 4
+    memory: 4G
+    disk: 25
+    use_ssd: true
 
   hello_world_script: echo "Hello world"
 
@@ -42,5 +58,20 @@ task:
     cpu: 4
     memory: 4G
     disk: 25
+
+  hello_world_script: echo "Hello world"
+
+
+task:
+  name: OpenBSD - GCE
+
+  compute_engine_instance:
+    image_project: pg-ci-images-dev
+    image_family: pg-ci-openbsd-7-0
+    platform: openbsd
+    cpu: 4
+    memory: 4G
+    disk: 25
+    use_ssd: true
 
   hello_world_script: echo "Hello world"
